@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+   background: url("/img/fondoRegistro.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+* {
+    box-sizing: border-box;
+}
+
+
+
+.formulario{
+    background: #fff;
+    margin-top: 2%;
+    padding: 3px;
+    background-color: rgba(255, 165, 0, 0.3);
+    
+    
+}
+.contenedor{
+    width: 100%;
+    padding: 15px;
+}
+h1{
+    text-align: center;
+    color: #1a2537;
+    font-size: 40px;
+    text-shadow: 10px 10px 5px gray;
+}
+h2{
+    text-align: center;
+    color: #161718;
+    font-size: 15px;
+    background: transparent;
+    font-weight: bold;
+    padding: 15px; 
+    border-top: 2px solid #cc6a66;
+    border-bottom:2px solid #cc6a66;
+    
+    }
+
+input[type="text"],
+input[type="password"]{
+    font-size: 20px;
+    width: 100%;
+    padding: 5px;
+    border: none;
+    margin-bottom: 3%;
+    padding-left: 4%;
+    border-radius: 10px;
+}
+
+
+span {
+    text-align:center;
+    width:80px;
+    font-family: verdana;
+    }
+
+
+.button{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background:  #1a2537;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover{
+    background: cadetblue;
+}
+p{
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+      color: #1a2537;
+    font-weight: 600;
+}
+.link:hover{
+     color: cadetblue;
+}
+#exito{
+
+    width: 80%;
+    height: 5%;
+    margin: auto;
+}
+@media(min-width:768px)
+{
+    .formulario{
+        margin: auto;
+        width: 500px;
+        margin-top: 2%;
+        border-radius: 2%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

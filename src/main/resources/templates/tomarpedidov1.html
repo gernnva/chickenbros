@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="/pedido/selectProductos" method="POST">
+            
+            <label for="">Direccion:   </label>
+            <input type="text"  name="direccion" required /><br> <br>
+            <label for="">Horario: </label>
+             <p> 
+            <select name="hora_entrega"> 
+           
+                <option th:each="variable : ${listaHora}" th:text="${variable}" ></option>
+
+
+          </select> </p>
+            
+ <button class="btn btn-primary boton" type="submit"> Seleccionar productos </button>
+
+        </form> <!-- FIN DE FORMULARIO-->
+    </body>
+</html>

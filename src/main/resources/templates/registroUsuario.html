@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title> Login </title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  
+	<link rel="stylesheet" href="/Estilos/styleRegistro.css">
+	
+
+</head>  
+<body>
+
+  <div class="divFormulario">
+        <form class="formulario" method="post" >
+                <div class="col input-group mb-3 d-flex justify-content-center"></div>
+              <span class="input-group justify-content-center"  
+              style="color: black; font-size: 250%; font-family: 'sans-serif'; font-weight: bold; ">
+                Registro </span>
+            
+              <div class="contenedor" action="/cliente/registro">
+                  
+                  
+                  <input type="text" placeholder="Nombre" name="nombre" required/>
+                  <input type="text" placeholder="Apellido" name="apellido" required/> 
+                  <input type="text" placeholder="email" name="email" required/>  
+                  <input type="text" placeholder="Dirección" name="direccion" required/>
+                  <input type="text" placeholder="Telefono" name="telefono" required/>  
+                  <input type="password" placeholder="Contraseña" name="clave" required/>  
+                  <input type="password" placeholder="Repetir contraseña" name="claveRep" required/>
+                  <input type="submit" value="Registrarse" class="button">
+
+                  
+  
+              </div>
+              
+              <div th:if="${exito}!=null" class="alert alert-success" role="alert">
+                <p class="card-text">Registro Exitoso</p>
+              </div>
+                <div class="alert alert-danger" role="alert" th:if="${error}!=null">
+                <p th:text="${error}"></p>
+            </div>
+
+              
+        </form>
+        
+      </div>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <!-- FOMRULARIO DE PEDIDO -->
+            <form action="/pedido/tomarpedido" method="POST">
+                
+            <label for="">Cliente:   </label>
+            <input type="text"  name="id_cliente" ><br>
+            
+            <!--<label for="">Monto: </label>
+            <input type="text"  name="monto_total" ><br> -->
+            
+           <p> Hora 
+            <select name="hora_entrega"> 
+            <!-- <li th:each="variable : ${lista}" th:text="${variable}"></li> -->
+                
+
+
+          </select> </p> 
+            
+           
+            <label for="">Direccion:   </label>
+            <input type="text"  name="lugar" ><br>
+            
+            
+            <div class="alert alert-success" role="alert" th:if="${hora}!=null">
+                <p th:text="${hora}"></p>
+            </div> 
+            <div class="alert alert-danger" role="alert" th:if="${error}!=null">
+                <p th:text="${error}"></p>
+            </div>
+                 <input th:each="variable : ${listaHora}" th:text="${variable}" ></option>
+                 
+                <button class="btn btn-primary boton" type="submit"> Agregar</button>
+
+        </form>
+        </div>
+    </body>
+</html>

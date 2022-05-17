@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p> Formulario de Clientes</p>
+        <!-- FORMULARIO -->
+        <form action="/cliente/registro" method="POST">
+            
+            <label for="">Nombre:   </label>
+            <input type="text"  name="nombre" required /><br> <br>
+            <label for="">Apellido: </label>
+            <input type="text"  name="apellido" required /><br> <br>
+            <label for="">Email:   </label>
+            <input type="text"  name="email" required /><br><br>
+            <label for="">Clave:   </label>
+            <input type="text"  name="clave" required /><br><br>
+            <label for="">Repetir Clave:   </label>
+            <input type="text"  name="claveRep" required /><br><br>
+            <label for="">Direccion:   </label>
+            <input type="text"  name="direccion" required /><br><br>
+            <label for="">Telefono:   </label>
+            <input type="text"  name="telefono" required /><br><br>
+
+            <div class="alert alert-success" role="alert" th:if="${exito}!=null">
+                <p th:text="${exito}"></p>
+            </div>
+            <div class="alert alert-danger" role="alert" th:if="${error}!=null">
+                <p th:text="${error}"></p>
+            </div>
+                
+                <button class="btn btn-primary boton" type="submit"> Agregar</button>
+
+        </form> <!-- FIN DE FORMULARIO-->
+    </body>
+</html>

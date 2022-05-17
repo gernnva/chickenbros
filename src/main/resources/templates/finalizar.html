@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Se finalizo el pedido</div>
+        
+        <div class="alert alert-danger" role="alert" >
+                <p th:text="${direccion}"></p> </div>
+            
+            <div class="alert alert-danger" role="alert" >
+                <p th:text="${producto}"></p> </div>
+            <div class="alert alert-danger" role="alert" >
+                <p th:text="${hora}"></p> </div>
+            <div class="alert alert-danger" role="alert" >
+                <p th:text="${cantidad}"></p> </div>
+                <div class="alert alert-danger" role="alert" >
+                <p th:text="${boton}"></p> </div>
+        
+        Cantidad de hashmap<div class="alert alert-danger" role="alert" >
+                <p th:text="${monto}"></p> </div>
+        
+      
+                <p th:each="variable : ${pedido}" th:text="${variable.id_pedido}"></p> 
+                
+                <p th:each="variable : ${auxprod}" th:text="${variable.id}"></p> 
+        
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <form action="/pedido/agregarPedido" method="POST">
+            
+            <label for="">Producto:   </label>
+            
+            <select name="producto"> 
+            <!-- <li th:each="variable : ${lista}" th:text="${variable}"></li> -->
+                <option th:each="variable : ${listaProducto}" th:text="${variable.nombre}" th:value="${variable.id_producto}"></option>
+
+                
+            </div>
+
+          </select>
+            
+            <label for="">Cantidad: </label>
+            <input type="text"  name="cantidad" required /><br> <br>
+            
+            <input type="submit" value="Agregar producto"     name="boton" /> 
+           <input type="submit" value="Finalizar"     name="boton" /> 
+            
+           <input type="hidden"  name="direccion" th:value="${direccion}">
+           <input type="hidden"  name="hora_entrega" th:value="${hora}">
+           
+            <div class="alert alert-danger" role="alert" >
+                <p th:text="${direccion}"></p> </div>
+            
+            <div class="alert alert-danger" role="alert" >
+                <p th:text="${producto}"></p> </div>
+            <div class="alert alert-danger" role="alert" >
+                <p th:text="${hora}"></p> </div>
+            <div class="alert alert-danger" role="alert" >
+                <p th:text="${cantidad}"></p> </div>
+                <div class="alert alert-danger" role="alert" >
+                <p th:text="${boton}"></p> </div>
+           
+            
+        </form> <!-- FIN DE FORMULARIO-->
+    </body>
+</html>
